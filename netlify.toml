@@ -1,4 +1,4 @@
 [build]
   functions = "lambda"
-  build = "npm run build:lambda"
+  command = "npm run build:lambda"
   publish = "static"
