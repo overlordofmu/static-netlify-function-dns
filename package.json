@@ -1,0 +1,25 @@
+{
+  "name": "static-netlify-function-dns",
+  "version": "1.0.0",
+  "description": "This is a (very) basic demo of Netlify Functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:lambda": "netlify-lambda serve functions",
+    "build:lambda": "netlify-lambda build functions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overlordofmu/static-netlify-function-dns.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/overlordofmu/static-netlify-function-dns/issues"
+  },
+  "homepage": "https://github.com/overlordofmu/static-netlify-function-dns#readme",
+  "dependencies": {
+    "netlify-lambda": "^1.4.2"
+  }
+}
