@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Netlify Functions DNS Static Site</title>
+</head>
+
+<body>
+    <div>
+        <h2>DNS Lookup</h2>
+        <p><input name="searchTxt" type="text" maxlength="512" id="searchTxt" /></p>
+        <p><button type="submit" onclick="getDNS()">Click me to perform<br />a DNS lookup using<br />a netlify function</button></p>
+        <p id="dns-text-p">Waiting for DNS lookup</p>
+    </div>
+    <script>
+        const getDNS = async () => {
+            const textBlock = document.getElementById("dns-text-p")
+            try {
+                const response = await fetch('/.netlify/functions/dns?hostname=' + document.getElementById("searchTxt").value)
+                if (!response.ok) {
+                    throw new Error("The request failed")
+                }
+                const resObj = await response.json()
+                console.log(resObj)
+
+                textBlock.innerHTML = `${resObj.body}`
+
+            } catch (err) {
+                textBlock.innerHTML = "ERROR!"
+            }
+        }
+    </script>
+</body>
+
+</html>
