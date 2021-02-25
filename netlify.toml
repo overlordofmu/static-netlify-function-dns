@@ -1,4 +1,12 @@
 [build]
   functions = "lambda"
-  command = "npm run build:lambda"
+  command = "env ; export ; npm run build:lambda"
   publish = "static"
+
+[build.environment]
+  MADE_UP_VARIABLE_1 = "foo"
+  MADE_UP_VARIABLE_2 = "bar"
+
+
+[context.branchname.environment]
+  MADE_UP_VARIABLE_3 = "welp"
