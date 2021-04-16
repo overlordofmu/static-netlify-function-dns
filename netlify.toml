@@ -7,6 +7,14 @@
   MADE_UP_VARIABLE_1 = "foo"
   MADE_UP_VARIABLE_2 = "bar"
 
-
-[context.branchname.environment]
+[context.new-branch.environment]
   MADE_UP_VARIABLE_3 = "welp"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+      Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept, authorization"
+      Access-Control-Allow-Origin = "https://distracted-poitras-cc447e.netlify.app/"
+      Access-Control-Allow-Methods = "POST, OPTIONS"
+      Access-Control-Allow-Credentials = "true"
+      Vary = "Origin"
