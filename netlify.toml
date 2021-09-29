@@ -8,7 +8,7 @@
   MADE_UP_VARIABLE_2 = "bar"
 
 [context.new-branch.environment]
-  MADE_UP_VARIABLE_3 = "welp"
+  MADE_UP_VARIABLE_3 = "welp alright"
 
 [[headers]]
   for = "/*"
