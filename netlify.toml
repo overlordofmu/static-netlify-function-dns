@@ -1,6 +1,6 @@
 [build]
   functions = "lambda"
-  command = "env ; export ; npm run build:lambda"
+  command = "npm run build:lambda"
   publish = "static"
 
 [build.environment]
