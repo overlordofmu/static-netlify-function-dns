@@ -18,3 +18,29 @@
       Access-Control-Allow-Methods = "POST, OPTIONS"
       Access-Control-Allow-Credentials = "true"
       Vary = "Origin"
+
+[[redirects]]
+  from = "/no-country"
+  to = "/blog"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/country-lower"
+  to = "/blog"
+  status = 302
+  force = true
+  conditions = { country = ["us"] }
+
+[[redirects]]
+  from = "/country-upper"
+  to = "/blog"
+  status = 302
+  force = true
+  conditions = { country = ["US"] }
+
+[[redirects]]
+  from = "/*"
+  to = ".netlify/functions/dns"
+  status = 200
+
