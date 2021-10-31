@@ -21,23 +21,31 @@
 
 [[redirects]]
   from = "/no-country"
-  to = "/blog"
+  to = "/blog-no-country"
   status = 302
   force = true
 
 [[redirects]]
   from = "/country-lower"
-  to = "/blog"
+  to = "/blog-country-lower"
   status = 302
   force = true
-  conditions = { country = ["us"] }
+  country = "us"
 
 [[redirects]]
   from = "/country-upper"
-  to = "/blog"
+  to = "/blog-country-upper"
+  status = 302
+  force = true
+  country = "US"
+
+[[redirects]]
+  from = "/country-upper-cond"
+  to = "/blog-country-upper-cond"
   status = 302
   force = true
   conditions = { country = ["US"] }
+
 
 [[redirects]]
   from = "/*"
