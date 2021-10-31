@@ -46,6 +46,13 @@
   force = true
   conditions = { country = ["US"] }
 
+[[redirects]]
+  from = "/country-lower-cond"
+  to = "/blog-country-lower-cond"
+  status = 302
+  force = true
+  conditions = { country = ["us"] }
+
 
 [[redirects]]
   from = "/*"
