@@ -53,6 +53,14 @@
   force = true
   conditions = { country = ["us"] }
 
+[[redirects]]
+  from = "/country-capital-country-cond-no-array"
+  to = "/blog-country-capital-country-cond-no-array"
+  status = 302
+  force = true
+  conditions = { Country = "us" }
+
+
 
 [[redirects]]
   from = "/*"
