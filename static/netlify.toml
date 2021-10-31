@@ -60,7 +60,35 @@
   force = true
   conditions = { Country = "us" }
 
+[[redirects]]
+  from = "/country-capital-country-cond-no-array-commas"
+  to = "/blog-country-capital-country-cond-no-array-commas"
+  status = 302
+  force = true
+  conditions = { Country = "us,ca" }
 
+
+[[redirects]]
+  from = "/country-capital-country-cond-array-sing"
+  to = "/blog-country-capital-country-cond-array-sing"
+  status = 302
+  force = true
+  conditions = { Country = ["us"] }
+
+[[redirects]]
+  from = "/country-capital-country-cond-array-mult"
+  to = "/blog-country-capital-country-cond-array-mult"
+  status = 302
+  force = true
+  conditions = { Country = ["us","ca"] }
+
+
+[[redirects]]
+  from = "/country-capital-country-cond-array-sing-commas"
+  to = "/blog-country-capital-country-cond-array-sing-commas"
+  status = 302
+  force = true
+  conditions = { Country = ["us,ca"] }
 
 [[redirects]]
   from = "/*"
